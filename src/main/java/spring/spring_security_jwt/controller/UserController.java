@@ -15,7 +15,7 @@ package spring.spring_security_jwt.controller;
 	import org.springframework.web.bind.annotation.RequestMapping;
 	import org.springframework.web.bind.annotation.RestController;
 
-import spring.spring_security_jwt.modal.AppUser;
+import spring.spring_security_jwt.model.AppUser;
 import spring.spring_security_jwt.service.UserService;
 
 

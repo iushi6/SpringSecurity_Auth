@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import spring.spring_security_jwt.modal.AppUser;
+import spring.spring_security_jwt.model.AppUser;
 import spring.spring_security_jwt.repository.UserRepository;
 
 @Service
