@@ -1,5 +1,7 @@
 package spring.spring_security_jwt.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -7,15 +9,18 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import spring.spring_security_jwt.model.AppUser;
 import spring.spring_security_jwt.security.JwtRequest;
 import spring.spring_security_jwt.security.JwtResponse;
 import spring.spring_security_jwt.security.JwtTokenUtil;
 import spring.spring_security_jwt.service.MyUserDetailsService;
+import spring.spring_security_jwt.service.UserService;
 
 @Controller
 public class HomeController {
@@ -49,5 +54,6 @@ public class HomeController {
     public String hello() {
         return "Hello World!";
     }
+    
 }
 

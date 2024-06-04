@@ -2,6 +2,8 @@ package spring.spring_security_jwt.security;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
@@ -12,6 +14,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import javax.crypto.SecretKey;
+
 @Component
 public class JwtTokenUtil{
 
@@ -19,7 +23,7 @@ public class JwtTokenUtil{
     public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
 
     
-    private String secret = "secret";
+    private SecretKey secret = Keys.secretKeyFor(SignatureAlgorithm.HS256);;
 
     //retrieve username from jwt token
     public String extractUsername(String token) {
