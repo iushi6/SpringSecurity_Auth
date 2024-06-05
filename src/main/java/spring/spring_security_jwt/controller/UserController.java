@@ -28,10 +28,10 @@ import spring.spring_security_jwt.service.UserService;
 		private UserService userService;
 		
 		
-//		@GetMapping("/all")
-//		public List<AppUser> getAllUsers(){
-//			return userService.getAllUsers();
-//		}
+		@GetMapping("/all")
+		public List<AppUser> getAllUsers(){
+			return userService.getAllUsers();
+		}
 		
 		@GetMapping("/{id}")
 		public ResponseEntity<AppUser> getUserById(@PathVariable Long id){

@@ -22,7 +22,7 @@ import spring.spring_security_jwt.security.JwtTokenUtil;
 import spring.spring_security_jwt.service.MyUserDetailsService;
 import spring.spring_security_jwt.service.UserService;
 
-@Controller
+@RestController
 public class HomeController {
 
     @Autowired
